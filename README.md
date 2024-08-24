@@ -200,3 +200,25 @@ Final step is to model files. It has the complete description about NMOS and PMO
 
 SPICE simulation for the particular values and below is the output graph:
 ![image](https://github.com/user-attachments/assets/216a0be8-3c58-410c-b18d-d11cb468c86d)
+
+
+Switching Threshold Vm
+Switching thresold, Vm (the point at which the device switches the level) is the one of the parameter that defined the robustness of the Inverter. Switching thresold is a point at which Vin=Vout.
+![image](https://github.com/user-attachments/assets/b2b24ce4-a48c-4aee-9551-cc4388c4cf0a)
+
+In the graph below we can identify that the PMOS and NMOS are in which region. The direction of current flowing is different for NMOS nad PMOS.
+![image](https://github.com/user-attachments/assets/08fa2316-5b3b-402c-89ba-65d717a68e3b)
+
+
+Static and dynamic simulation of CMOS inverter
+![image](https://github.com/user-attachments/assets/4b5bb180-69a7-4b22-84fc-73f527b28bd9)
+
+![image](https://github.com/user-attachments/assets/6291c5e2-1fda-400f-88a5-eaa296f52a4e)
+
+
+Introduction to delay tables
+Power Aware CTS:- If we make enable pin at logic '1' in the AND gate, then clock will propagate and if we make it 'logic 0' it will block the clock. Similarly in 'OR' gate if we make enable as 'logic 0' it will propagate and on making it 'logic 1' it will block the clock.
+
+So the advantage of this blocking period is that we can save lot of power in clock tree.
+![image](https://github.com/user-attachments/assets/f568caab-090c-4caa-aeb9-b6b6e2e361b1)
+
