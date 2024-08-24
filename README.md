@@ -95,20 +95,14 @@ Below is the command snap to load def in Magic tool:
 
 
 
-**Library Binding and Placement**
+**Library Binding, Placement** **& cell design Flow**:
  ![image](https://github.com/user-attachments/assets/838551ed-7f79-4a15-8f6a-893f06a893d3)
 
 ![image](https://github.com/user-attachments/assets/ec186a58-e795-4249-ab37-ddc0cf940cd4)
 
-
-**Placement**:
 ![image](https://github.com/user-attachments/assets/fecb3a5f-af0d-42e4-9a7d-ebee974ff5d4)
 
-**Library Characterization and cell design**:	
-![image](https://github.com/user-attachments/assets/1edb277f-e36e-4334-80aa-f71f654498ac)
-
-
-characterization flow
+**Library Characterization Flow**:	
 1. Read the spice model.
 2. Read the extracted spice netlist
 3. Define or recognize the behaviour of the buffer
@@ -120,9 +114,9 @@ characterization flow
 
    ![image](https://github.com/user-attachments/assets/6f441ddc-4d13-4c05-b339-813dd01d9fa2)
 
+Next step is to feed in all this inputs from 1 to 8 in a form of a configuration file to the characterization software "GUNA" .This software will generate power, noise and timing model.
 
-   
-
+![image](https://github.com/user-attachments/assets/a37f9111-9eba-4850-bb03-219c9aea54da)
 
 
 
