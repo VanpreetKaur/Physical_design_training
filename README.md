@@ -1,6 +1,6 @@
-Day 1:
+![image](https://github.com/user-attachments/assets/36800ea2-06d7-40f0-8312-aa47b00e3ad5)![image](https://github.com/user-attachments/assets/4242470c-c1d9-4525-8414-6d8d12ee5477)Day 1:
 
-ASIC OPENLANCE FLOW overview: 
+**ASIC OPENLANCE FLOW overview**: 
 Below is ASIC OpenLane Flow: 
 ![image](https://github.com/user-attachments/assets/ff0ad762-ca0d-4a73-bb43-07167fcd353e)
 
@@ -10,7 +10,7 @@ In this area, we will be excecuting OpenLane ASIC flow (RTL to GDS)
 
 
 
-PROCESS DESIGN KITS:
+**PROCESS DESIGN KITS**:
 Below is the directory structure for PDK(process design kits): 
 ![image](https://github.com/user-attachments/assets/0bfa1a24-4db9-40b4-b8f7-13b1f2079e24)
 PDK used for this workshop is SKYWATER 130nm PDK. 
@@ -41,7 +41,7 @@ Below is the work area snapshot showing the main file which will be used for run
 
 
 
-DATA PREPARATION STEP:
+**DATA PREPARATION STEP**:
 In this step, we need to first prepare our data which includes merging lefs such as tlef(technology lef) and cell lefs. This can be done using below command as highlighted in the below snap i.e., 
 prep -design picorv32a
 
@@ -54,7 +54,7 @@ here, under designs/picorv32a folder, a directory names "runs" is created. This 
 
 
 
-SYNTHESIS:
+**SYNTHESIS**:
 For synthesis, we need to use command: run_synthesis
 here, synthesis along with sta and abc run is performed. 
 Below snap shows synthesis step completion:
@@ -75,6 +75,33 @@ below is the snap showing reports for synthesis step:
 ![image](https://github.com/user-attachments/assets/cc9b813f-74ad-49c8-aec2-1ea710c6bf58)
 
 
+**Chip Floorplanning**:	
+![image](https://github.com/user-attachments/assets/2f19d734-6921-49c9-9e7b-905ba8e3f1c2)
+
+Floorplan results are shown below:
+![image](https://github.com/user-attachments/assets/df822ffe-1ba1-4d1e-b922-dc12c2b8cc8c)
+
+below is the snap of design def: 
+![image](https://github.com/user-attachments/assets/0ca214bf-0bfa-483a-bf61-c0184d909456)
+
+Die area = (660685/1000) * (671405/1000) 
+          = 660.685um *671.405um
+          
+**Die area = 4,43,587.212425um2**
+
+
+Below is the command snap to load def in Magic tool:
+![image](https://github.com/user-attachments/assets/29b9c9e4-7b6e-430e-99b9-60f867f522fd)
+
+
+
+**Library Binading and Placement**
+ ![image](https://github.com/user-attachments/assets/8f4aadee-93bf-41bb-bd43-125253981901)
+
+
+
+**Cell Design and characterization flows**:
+![image](https://github.com/user-attachments/assets/a76df220-a332-4b2d-a709-405b0f715464)
 
 
 
