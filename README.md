@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/99666cd7-3280-4a9a-92de-c4e8f6438321)Day 1:
+Day 1:
 
 **ASIC OPENLANCE FLOW overview**: 
 Below is ASIC OpenLane Flow: 
@@ -174,7 +174,29 @@ VTC- SPICE simulations:
 
    ![image](https://github.com/user-attachments/assets/64d387af-c94a-449e-ba4b-871421e1ef99)
 
-5. Name the nodes:- Now we wiil name these nodes as Vin, Vss, Vdd, out.
+5. Name the nodes:- Now we will name these nodes as Vin, Vss, Vdd, out.
 
    ![image](https://github.com/user-attachments/assets/1f0da643-80fc-43b9-b6dc-41baab722843)
 
+   Below is the SPICE deck:
+
+    Drain- Gate- Source- Substrate
+
+For M1 MOSFET drain is connected to output node, gate is connected to input node, PMOS transistor substrate and Source is connected to Vdd node.
+
+For M2 MOSFET drain is connected to output node, gate is connected to input node, NMOS source and substrate are connected to 0. 
+![image](https://github.com/user-attachments/assets/9ab0265f-61ca-4b4f-b172-47dce0b9f004)
+
+Below snap shows the connectivity of load cap (Cload)
+![image](https://github.com/user-attachments/assets/bbe61f03-1def-4746-8cdb-d73ba4b669d8)
+
+ below is simulation commands in which we are swiping the Vin from 0 to 2.5 with the stepsize of 0.05. Because we want Vout while changing the Vin:
+ ![image](https://github.com/user-attachments/assets/433a0102-6dee-4466-83b3-85839255fd2d)
+
+Final step is to model files. It has the complete description about NMOS and PMOS:
+![image](https://github.com/user-attachments/assets/c7571e34-f202-479b-af4a-f2bc95e8214d)
+
+![image](https://github.com/user-attachments/assets/13e913c9-8dbc-4593-8cb2-8d025c40be56)
+
+SPICE simulation for the particular values and below is the output graph:
+![image](https://github.com/user-attachments/assets/216a0be8-3c58-410c-b18d-d11cb468c86d)
