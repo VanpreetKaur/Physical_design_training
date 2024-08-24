@@ -95,13 +95,35 @@ Below is the command snap to load def in Magic tool:
 
 
 
-**Library Binading and Placement**
- ![image](https://github.com/user-attachments/assets/8f4aadee-93bf-41bb-bd43-125253981901)
+**Library Binding and Placement**
+ ![image](https://github.com/user-attachments/assets/838551ed-7f79-4a15-8f6a-893f06a893d3)
+
+![image](https://github.com/user-attachments/assets/ec186a58-e795-4249-ab37-ddc0cf940cd4)
 
 
+**Placement**:
+![image](https://github.com/user-attachments/assets/fecb3a5f-af0d-42e4-9a7d-ebee974ff5d4)
 
-**Cell Design and characterization flows**:
-![image](https://github.com/user-attachments/assets/a76df220-a332-4b2d-a709-405b0f715464)
+**Library Characterization and cell design**:	
+![image](https://github.com/user-attachments/assets/1edb277f-e36e-4334-80aa-f71f654498ac)
+
+
+characterization flow
+1. Read the spice model.
+2. Read the extracted spice netlist
+3. Define or recognize the behaviour of the buffer
+4. Read the subcircuits of the inverter
+5. Attach the necessary power supplies
+6. Apply the stimulus
+7. need to provide the necessary output capacitance
+8. provide necessary simulation command for example if we are doing transent simulation so we need to give .tran command , if we are doing DC simulation then we give .dc command.
+
+   ![image](https://github.com/user-attachments/assets/6f441ddc-4d13-4c05-b339-813dd01d9fa2)
+
+
+   
+
+
 
 
 
