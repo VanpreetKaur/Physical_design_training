@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/36800ea2-06d7-40f0-8312-aa47b00e3ad5)![image](https://github.com/user-attachments/assets/4242470c-c1d9-4525-8414-6d8d12ee5477)Day 1:
+Day 1:
 
 **ASIC OPENLANCE FLOW overview**: 
 Below is ASIC OpenLane Flow: 
