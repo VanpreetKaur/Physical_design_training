@@ -1,4 +1,4 @@
-Day 1:
+![image](https://github.com/user-attachments/assets/99666cd7-3280-4a9a-92de-c4e8f6438321)Day 1:
 
 **ASIC OPENLANCE FLOW overview**: 
 Below is ASIC OpenLane Flow: 
@@ -119,9 +119,62 @@ Next step is to feed in all this inputs from 1 to 8 in a form of a configuration
 ![image](https://github.com/user-attachments/assets/a37f9111-9eba-4850-bb03-219c9aea54da)
 
 
+**General timing characterization parameters**
+![image](https://github.com/user-attachments/assets/86bb3bac-38e9-44a4-9193-9b40d23f07c6)
+
+![image](https://github.com/user-attachments/assets/77fa454a-d60d-47a7-a1c0-5914ee7eeec8)
+
+![image](https://github.com/user-attachments/assets/04284124-1e30-4cd7-a241-68eed7b3de9f)
+
+![image](https://github.com/user-attachments/assets/f4697c27-0202-46cd-81ee-2b8664d03c51)
+
+![image](https://github.com/user-attachments/assets/888f4630-29ef-4aad-b9cf-617a451c18ba)
+
+![image](https://github.com/user-attachments/assets/98e5748d-9ab6-419e-9650-4ed172e634e9)
+
+![image](https://github.com/user-attachments/assets/d1aea487-ed1f-4e6b-ba26-fae3f8c981ab)
+
+![image](https://github.com/user-attachments/assets/b93e18d9-ad31-4bbd-904d-1385360795dd)
 
 
 
+**Propagation delay and transition time**
+![image](https://github.com/user-attachments/assets/55685a4e-669a-4d82-bcf1-c31679babb14)
 
 
+Transition time= time(slew_high_rise_thr)- time(slew_low_rise_thr)
+
+or
+
+transition time = time(slew_high_fall_thr)- time(slew_low_fall_thr)
+
+![image](https://github.com/user-attachments/assets/d4a49291-852f-43b9-b94b-7d538b7c9072)
+
+
+
+**Labs for CMOS inverter ngspice simulations
+IO placer revision**
+In floor planning, pins are at equal distance and if we want to change it then we can also make it by Set command. For this, we have to check the swithes in the configuration and from that we have to take the syntax "env(FP_IO_MODE) 1". and make it to the "env(FP_IO_MODE) 2". then again run the floorplanning.
+
+![image](https://github.com/user-attachments/assets/630e7543-ec50-41e6-9c28-d7dc073d4977)
+
+
+**SPICE deck creation for CMOS inverter**
+
+VTC- SPICE simulations:
+1. create SPICE deck, it includes connectivity information about the netlist.It has input that are provided to the simulation and the deck points which will take the output.
+2. Component connectivity:- In this we need to define the connectivity of the substrate pin. Substrate pin tunes the threshold voltage of the PMOS and NMOS.
+3. Component values:- Values for the PMOS nad NMOS. We have taken the same size of both PMOS and NMOS.
+
+![image](https://github.com/user-attachments/assets/a3b4d446-a4c8-4518-90fe-c4bc3e68529f)
+
+![image](https://github.com/user-attachments/assets/c214ecc0-89f7-486c-96e4-3ce7f2af384b)
+
+4. Identify the nodes:- Node mean the points between which there is a component.These nodes are required to define the netlist.
+
+   ![image](https://github.com/user-attachments/assets/64d387af-c94a-449e-ba4b-871421e1ef99)
+
+5. Name the nodes:- Now we wiil name these nodes as Vin, Vss, Vdd, out.
+
+   ![image](https://github.com/user-attachments/assets/1f0da643-80fc-43b9-b6dc-41baab722843)
 
