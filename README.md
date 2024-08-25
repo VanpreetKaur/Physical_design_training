@@ -95,12 +95,76 @@ Below is the command snap to load def in Magic tool:
 
 
 
-**Library Binding, Placement** **& cell design Flow**:
- ![image](https://github.com/user-attachments/assets/838551ed-7f79-4a15-8f6a-893f06a893d3)
+**Library Building and Placement**:
+**Netlist binding and initial place design**:
 
-![image](https://github.com/user-attachments/assets/ec186a58-e795-4249-ab37-ddc0cf940cd4)
+Bind netlist with physical cells
+![image](https://github.com/user-attachments/assets/194fab18-265b-4f84-aa45-5a503a040361)
 
-![image](https://github.com/user-attachments/assets/fecb3a5f-af0d-42e4-9a7d-ebee974ff5d4)
+Now, remove the wires,all the gates, flipflops and blocks are present in the shelf which is called as Library.
+![image](https://github.com/user-attachments/assets/3c614dc6-36d5-4a12-b734-f6433d002e67)
+ Library also has the timing information of the perticular book like delay of the gates. Library can be devides into two sublibraries, One library consist of shape and size and other library might consist only of the delay information. Library has the various flavours of each and every cell. Like same cell can have bigger in size in different self, bigger the size of cell lesser the resestnce path so it will work faster and will have lesser delay. We can pick up from these what we want based on the timing condition and available space on the floorplan.
+
+
+**PLACEMENT:**
+Once we have given proper shape and size to each and every gates the next step is to take those particular shapes and sizes and place it on the floorplan. We have the floorplan with inout and output ports, we have particular netlist, and we have particular size given to each component of this netlist. So, finally we have the physical view of the logic gates.
+Next step is to place the netlist onto the floorplan. We have to take the connectivity information from the netlist and design the physical view gates on the floorplan.
+![image](https://github.com/user-attachments/assets/df72b006-de73-4bb4-9bc2-de8d8060a727)
+
+place the physical view of the netlist onto the floorplan in such a fashion that logical connectivity should be maintained and that particular circuit should interact with their input and output ports to maintain the timing and the delay will be minimal.
+![image](https://github.com/user-attachments/assets/059e2262-ae73-45b4-99b2-bb17e7ff8183)
+
+![image](https://github.com/user-attachments/assets/75172814-2bb9-4296-95cc-a9d2a3982fe0)
+
+Optimize placement using estimated wire-length and capacitance
+![image](https://github.com/user-attachments/assets/3c9f41ee-fd8f-4e3f-b764-cd56cc75c040)
+
+![image](https://github.com/user-attachments/assets/0a2c874a-9d72-4709-bcba-0ea18baf9d4b)
+
+![image](https://github.com/user-attachments/assets/3e1e45c6-c8ae-4e82-9216-c4d75ae774c2)
+
+
+
+**Cell design and characterization flows**
+In Cell Design Flow, Gates, flipflops, buffers are named as 'Standard Cells'. These standard cells are being placed in the section called as 'Library'.And in the library many other cells are available which have same functionality but the size is different.
+![image](https://github.com/user-attachments/assets/bd61af1b-8fa0-4a78-a706-7b627e3b9bb1)
+
+If we look into one of the inverter from the library the cell design flow is as follows
+The inverter has to represented in form of the shape, drive strength, power charracteristic and so on.
+Here cell design flow is devided into three parts.
+
+1. Inputs
+2. Design Steps
+3. Outputs
+
+![image](https://github.com/user-attachments/assets/ce4678db-5ddd-43cb-a549-3426730e30ef)
+
+1. **Inputs**: Inputs required for cell design is PDKs, DRC and LVS rules SPICE models, library and user defined specs. In DRC & LVS rules tech file is provided which contains design rules and actual values. Rules can be converted in to code. SPICE MODEL tells about threshold voltage equation.
+2. **design steps**: Design involves three steps which are circuit design, layout design, characterization.
+
+In circuit Design there are two steps.
+First step is to implement the function itself and second step is to model the PMOS nad NMOS transistor in such a fashion in order to meet the libraray.
+
+3. **outputs**:The typical output what we get from the circuit design is CDL(circuit description language) file,GDSII,LEF,extracted spice netlist(.cir).
+![image](https://github.com/user-attachments/assets/d8437f6c-c7c3-4d0a-8f4b-e7e950c05de3)
+
+Layout design step: In Layout Design First step is to get the function implemented through the MOS transistor through a set of PMOS and NMOS transistor and the second step is to get the PMOS network graph and the nNMOS network graph out of the design that has been implemented.
+![image](https://github.com/user-attachments/assets/de193e45-6b79-44fc-97e9-2bfadc1cf02d)
+
+After getting the network graphs next step is to obtain the Euler's path. Eule's path is basically the path which is traced only once.
+![image](https://github.com/user-attachments/assets/00209948-7998-4be4-bd9c-397dccf724e7)
+
+
+Next step is to draw stick diagram based on the Euler's path. This stick diagram is derived out of the circuit diagram.
+![image](https://github.com/user-attachments/assets/8909b098-282f-42e6-b742-18e18662fe85)
+
+
+Next step is to convert this stick diagram into a typical Layout, into a proper layout and then get the proper rule
+![image](https://github.com/user-attachments/assets/a17f9e6b-c702-4408-859a-1bc11422166a)
+
+
+Next and Final step is to extract the parasatics of above shown layout and charaterize it in terms of timing. Output of the layout design will be GDSll format. Once we get the extracted spice netlist then we characterize the same which includes getting timing, noise and power information.
+
 
 **Library Characterization Flow**:	
 1. Read the spice model.
@@ -183,14 +247,13 @@ VTC- SPICE simulations:
     Drain- Gate- Source- Substrate
 
 For M1 MOSFET drain is connected to output node, gate is connected to input node, PMOS transistor substrate and Source is connected to Vdd node.
-
 For M2 MOSFET drain is connected to output node, gate is connected to input node, NMOS source and substrate are connected to 0. 
 ![image](https://github.com/user-attachments/assets/9ab0265f-61ca-4b4f-b172-47dce0b9f004)
 
 Below snap shows the connectivity of load cap (Cload)
-![image](https://github.com/user-attachments/assets/bbe61f03-1def-4746-8cdb-d73ba4b669d8)
+![image](https://github.com/user-attachments/assets/5376a34f-43c2-4eab-b5c1-4b74cd3fcdfe)
 
- below is simulation commands in which we are swiping the Vin from 0 to 2.5 with the stepsize of 0.05. Because we want Vout while changing the Vin:
+below is simulation commands in which we are swiping the Vin from 0 to 2.5 with the stepsize of 0.05.
  ![image](https://github.com/user-attachments/assets/433a0102-6dee-4466-83b3-85839255fd2d)
 
 Final step is to model files. It has the complete description about NMOS and PMOS:
@@ -202,7 +265,10 @@ SPICE simulation for the particular values and below is the output graph:
 ![image](https://github.com/user-attachments/assets/216a0be8-3c58-410c-b18d-d11cb468c86d)
 
 
-Switching Threshold Vm
+**Switching Threshold Vm**:
+below snap shows the correlation of switching threshold with other parameters:
+![image](https://github.com/user-attachments/assets/9f76bc2a-0bc8-43b3-9cc8-e007c7799f36)
+
 Switching thresold, Vm (the point at which the device switches the level) is the one of the parameter that defined the robustness of the Inverter. Switching thresold is a point at which Vin=Vout.
 ![image](https://github.com/user-attachments/assets/b2b24ce4-a48c-4aee-9551-cc4388c4cf0a)
 
@@ -214,6 +280,9 @@ Static and dynamic simulation of CMOS inverter
 ![image](https://github.com/user-attachments/assets/4b5bb180-69a7-4b22-84fc-73f527b28bd9)
 
 ![image](https://github.com/user-attachments/assets/6291c5e2-1fda-400f-88a5-eaa296f52a4e)
+
+
+
 
 
 Introduction to delay tables
