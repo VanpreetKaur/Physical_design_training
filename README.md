@@ -276,10 +276,24 @@ In the graph below we can identify that the PMOS and NMOS are in which region. T
 ![image](https://github.com/user-attachments/assets/08fa2316-5b3b-402c-89ba-65d717a68e3b)
 
 
-Static and dynamic simulation of CMOS inverter
+Static and dynamic simulation of CMOS inverter:
+
+input to dynamic simulation for checking and rise and fall delay:
+
+![image](https://github.com/user-attachments/assets/a903eb5c-0f04-4e32-b21f-c0aa62ce31e3)
+
+
+
+The graph Time vs Voltage will be plotted here from where we can calculate the rise and fall delay:
 ![image](https://github.com/user-attachments/assets/4b5bb180-69a7-4b22-84fc-73f527b28bd9)
 
-![image](https://github.com/user-attachments/assets/6291c5e2-1fda-400f-88a5-eaa296f52a4e)
+![image](https://github.com/user-attachments/assets/bf6c42c9-06df-45ae-9283-6ab81d9008de)
+
+Calculating Rise Prpagation delay as difference of time stamp for 50% VDD from output rise waveform to input fall waveform: 1.16277e-9-1.01446e-9 = 148ps
+
+![image](https://github.com/user-attachments/assets/02a87caa-93da-43ad-b5b5-cb98a9fcb446)
+
+
 
 
 
