@@ -295,11 +295,41 @@ Calculating Rise Prpagation delay as difference of time stamp for 50% VDD from o
 
 
 
+****Inception of layout:
+CMOS faabrication process:**
+
+1. **Selecting a Substrate**:
+   ![image](https://github.com/user-attachments/assets/43897e64-4372-472e-a17a-6f096297dad8)
+
+2. **Create Active regions**:
+![image](https://github.com/user-attachments/assets/fbfb258e-758a-413f-8b15-e7ac77ad256a)
+![image](https://github.com/user-attachments/assets/e6e3730d-4e36-4c48-be13-4973c7be447a)
+![image](https://github.com/user-attachments/assets/95610c72-1a91-438a-bf1b-27597dcfd7a3)
+![image](https://github.com/user-attachments/assets/51dd0352-a8ec-4454-a7af-c7519bb0973f)
+![image](https://github.com/user-attachments/assets/c882c660-3de2-429b-b858-4bfe62d41b8a)
+
+3. **Formation of N-well and P-well**:
+![image](https://github.com/user-attachments/assets/64cf88b0-842e-4e0a-9cb0-e3bd613a82a5)
+![image](https://github.com/user-attachments/assets/29ed74f5-a026-4081-852c-a0002ef2906e)
+![image](https://github.com/user-attachments/assets/ace57fb5-c636-4f0a-80e1-db343a938d71)
+![image](https://github.com/user-attachments/assets/ebed081f-daaa-473d-b57d-4f433469db89)
+![image](https://github.com/user-attachments/assets/da0a260f-5044-406e-96de-c37236ca54c7)
+![image](https://github.com/user-attachments/assets/14cc97a5-98c2-468a-8272-537c2955225b)
+
+4. **Formation of Gate**:
+Factors controlling threshold voltage, which decides the turning on of GATE which finally decides gate formation:
+ ![image](https://github.com/user-attachments/assets/0dbf7831-7980-47af-b9ec-991946f43aae)
+![image](https://github.com/user-attachments/assets/640a3f36-d662-4efd-9ef3-6f7008e7a453)
+![image](https://github.com/user-attachments/assets/4669f597-9cc4-4130-9ca9-f33ab1e45505)
+![image](https://github.com/user-attachments/assets/9968f561-dd02-403d-8fca-b9447b81803f)
+![image](https://github.com/user-attachments/assets/dc52dc93-346d-4aea-b4ce-9054edc79532)
+![image](https://github.com/user-attachments/assets/6a6a5c40-52fb-4611-95d6-2a11bd03d8bc)
+
+5. **Lightly doped Drain Formation(LDD)**:
+![image](https://github.com/user-attachments/assets/411da397-873a-4248-88d9-c78ea00f9ddf)
 
 
-
-
-Introduction to delay tables
+**Introduction to delay tables**
 Power Aware CTS:- If we make enable pin at logic '1' in the AND gate, then clock will propagate and if we make it 'logic 0' it will block the clock. Similarly in 'OR' gate if we make enable as 'logic 0' it will propagate and on making it 'logic 1' it will block the clock.
 
 So the advantage of this blocking period is that we can save lot of power in clock tree.
