@@ -395,12 +395,25 @@ So the advantage of this blocking period is that we can save lot of power in clo
 
 **ROUTING & DRC rule check**:
 ![image](https://github.com/user-attachments/assets/3ffdb503-6d65-44d6-b866-8a2589330641)
-
 ![image](https://github.com/user-attachments/assets/70eea392-8c75-45f6-b687-eabe2844f08b)
+![image](https://github.com/user-attachments/assets/232aed8c-e957-4f2b-8828-7aa73e3d530a)
+![image](https://github.com/user-attachments/assets/07674a76-121d-4c0d-bb24-fd964567d895)
 
 
+![image](https://github.com/user-attachments/assets/1453c1dd-5c30-4d19-8530-81b88d52632a)
+![image](https://github.com/user-attachments/assets/0f6a7dae-72da-48b0-a8a1-56ea0ef670da)
+![image](https://github.com/user-attachments/assets/10590f4c-e1f5-42e3-ba49-fc1dbf2efc5d)
+![image](https://github.com/user-attachments/assets/469c74fa-8ba3-4aec-944f-4ba5ee983207)
+![image](https://github.com/user-attachments/assets/30870a25-645c-48f9-8b8e-26850d3d6f28)
+![image](https://github.com/user-attachments/assets/31b336b9-edf0-4bbf-9608-c30f93f736cb)
+![image](https://github.com/user-attachments/assets/37c09617-d901-492b-9767-9fb07faa2633)
 
 
-
+**ROUTING using TritonRoute**:
+![image](https://github.com/user-attachments/assets/d0979006-ad87-405d-af15-2d084107583c)
+![image](https://github.com/user-attachments/assets/99daf7e0-8bf3-4566-a43d-a8708e9d6546)
+![image](https://github.com/user-attachments/assets/34b84165-64f2-40ab-9c31-1a57bb152d44)
+![image](https://github.com/user-attachments/assets/8f7bfaf4-329a-4f46-841f-beb840d2e99d)
+![image](https://github.com/user-attachments/assets/78ef37f9-e4dd-4a9c-a906-6b88110b0476)
 
 
