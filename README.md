@@ -418,4 +418,5 @@ So the advantage of this blocking period is that we can save lot of power in clo
 
 
 ![image](https://github.com/user-attachments/assets/6c386ed1-9e8b-4b85-bf85-ff6ea3005f7e)
+![image](https://github.com/user-attachments/assets/9c62ced7-82ed-4e16-9af4-64cf28637290)
 
