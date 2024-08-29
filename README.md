@@ -18,10 +18,10 @@ PDK used for this workshop is SKYWATER 130nm PDK.
 2. open_pdks: This is needed as all the silicon pdk files are compatible with commercial tools and not with opensource tools(such as magic, netgen etc). These pdk includes scripts which mitigate the compatibility issues of foundry pdks with open source tools.
 3. Sky130A: this is a pdk which is made compatible for use with opensource tools. It includes files such as tool specific tech files, and technology process specific pdks.Below is the snap showing details for both the files:
 ![image](https://github.com/user-attachments/assets/6978d7c9-0cd3-4df3-b48d-c942afa7802d)
-
-libs.tech folder includes files specific to tools. 
-libs.ref folder includes input files specific to process node and cell type such as verilog, libs, lef, cdl, gds etc.
-Nomenclature for specific folder in libs.ref such as sky130_fd_sc_hd: 
+PDK used for this workshop is SKYWATER 130nm PDK. 
+1. skywater-pdk: It includes all the information such as timing libraries, lef files, tech lef, tech files etc.
+2. open_pdks: This is needed as all the silicon pdk files are compatible with commercial tools and not with opensource tools(such as magic, netgen etc). These pdk includes scripts which mitigate the compatibility issues of foundry pdks with open source tools.
+m
 sky130: process node i.e. sky130nm
 fd: foundry abbreviation of skywate foundry
 sc: represents standard cell
@@ -334,4 +334,73 @@ Power Aware CTS:- If we make enable pin at logic '1' in the AND gate, then clock
 
 So the advantage of this blocking period is that we can save lot of power in clock tree.
 ![image](https://github.com/user-attachments/assets/f568caab-090c-4caa-aeb9-b6b6e2e361b1)
+![image](https://github.com/user-attachments/assets/f623bdd7-4a76-4526-9b80-729adba5a422)
+![image](https://github.com/user-attachments/assets/62a59596-7904-4869-ab86-5c39d998daaf)
+
+![image](https://github.com/user-attachments/assets/9205cceb-f701-4ea3-9437-80c83d999eae)
+
+
+**Setup Timing ananlysis**: 
+![image](https://github.com/user-attachments/assets/56280d51-3958-44ae-95ff-914349dae9c8)
+![image](https://github.com/user-attachments/assets/edb66cdc-06be-421c-b30b-116eb9e4ee6f)
+![image](https://github.com/user-attachments/assets/869d7c5c-145b-4f0b-b8ed-e32fd31291a1)
+![image](https://github.com/user-attachments/assets/9e7efe0c-eefd-4e31-bb52-d0f18c6a8279)
+
+**Clock Jitter and uncertainty**:
+![image](https://github.com/user-attachments/assets/1954eb42-71f4-4914-9f37-a89148a53db9)
+![image](https://github.com/user-attachments/assets/6090a6e8-15e6-40d3-b91d-b6399fa808a9)
+![image](https://github.com/user-attachments/assets/1ffebeac-92a9-43dc-b7e6-576f3998ba64)
+![image](https://github.com/user-attachments/assets/5d1b421a-98d1-4038-a3db-21c4ef5de0d3)
+
+**Clock Tree Synthesis**:
+![image](https://github.com/user-attachments/assets/83f4a326-e4c4-453d-a4ae-8be5796b6be9)
+![image](https://github.com/user-attachments/assets/c73af59f-3290-46f1-98e3-0612684f7cf9)
+![image](https://github.com/user-attachments/assets/ce2e96bb-98bf-4dcf-a706-42e98c9e6bdb)
+![image](https://github.com/user-attachments/assets/08904e40-3962-494c-a289-dbc134dbc06a)
+![image](https://github.com/user-attachments/assets/a1a3bf7b-7b08-4fd6-bafb-19607e8543ce)
+![image](https://github.com/user-attachments/assets/d919fdd5-8854-4287-a148-cd44f3ebc470)
+
+**Need for clock Buffering**:
+![image](https://github.com/user-attachments/assets/ba6fec53-b3a3-42f1-b905-c717235ac6db)
+
+
+**Timing Analysis with Ideal clock**:
+![image](https://github.com/user-attachments/assets/35983baf-17a0-4fdc-ba18-d8b66cf52aec)
+![image](https://github.com/user-attachments/assets/dc8652e1-842d-4096-8876-192a72b20e74)
+
+**Clock Net Shielding**:
+![image](https://github.com/user-attachments/assets/1f28052b-0adc-43d7-8bd7-258368f0c7dc)
+![image](https://github.com/user-attachments/assets/ac868da3-868f-45b0-8d7f-931b19fc77fa)
+![image](https://github.com/user-attachments/assets/984a2ed7-6100-4539-b167-6d0fb89f2184)
+
+**Timing Analysis with Real clocks**:
+
+**SETUP TIMING ANALSYSIS**:
+![image](https://github.com/user-attachments/assets/f1672a4b-beb1-4717-b276-963849bf938a)
+![image](https://github.com/user-attachments/assets/d1141fd2-3bc4-471b-82bf-ab14a3275eb3)
+![image](https://github.com/user-attachments/assets/c966824c-e0a6-4b35-b4da-a23b02ed9026)
+![image](https://github.com/user-attachments/assets/04df9190-4d38-4f16-989b-a2006c3b0e0c)
+![image](https://github.com/user-attachments/assets/dc15f4ff-1fd5-4ceb-9901-6261bab0c35d)
+
+**HOLD TIMING ANALYSIS**:
+![image](https://github.com/user-attachments/assets/b5162a19-3291-4ad1-842b-f73167a7dd36)
+![image](https://github.com/user-attachments/assets/e5072bfe-bf8e-46f4-990c-5607b6cc7d2a)
+![image](https://github.com/user-attachments/assets/7eda12d0-1d22-4b21-998b-9a9a98745a11)
+![image](https://github.com/user-attachments/assets/c4cc7eb9-a0fd-4b49-aa93-b8bc4231a4eb)
+![image](https://github.com/user-attachments/assets/eab97193-408d-45c0-88e0-af7987214411)
+![image](https://github.com/user-attachments/assets/a3ec3116-a610-43ed-acf4-bb2bfb70cf25)
+![image](https://github.com/user-attachments/assets/596ce615-7383-4039-92b3-082be74f62ba)
+![image](https://github.com/user-attachments/assets/a0e91873-2141-4eca-b322-5641c5f3eb6e)
+
+
+**ROUTING & DRC rule check**:
+![image](https://github.com/user-attachments/assets/3ffdb503-6d65-44d6-b866-8a2589330641)
+
+![image](https://github.com/user-attachments/assets/70eea392-8c75-45f6-b687-eabe2844f08b)
+
+
+
+
+
+
 
